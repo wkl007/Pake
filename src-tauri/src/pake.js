@@ -331,6 +331,7 @@ window.addEventListener("DOMContentLoaded", (_event) => {
       e.preventDefault();
       const anchorEl = document.createElement('a');
       anchorEl.setAttribute('href', hrefUrl);
+      anchorEl.setAttribute('target', '_self');
       anchorEl.click();
       return;
     }
