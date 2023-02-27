@@ -326,7 +326,7 @@ window.addEventListener("DOMContentLoaded", (_event) => {
   });
 
   document.addEventListener("click", (e) => {
-    if (e.arget.textContent.trim() === '继续使用') {
+    if (e.target.textContent.trim() === '继续使用') {
       const hrefUrl = new URL('https://calliper.cn/calliper/');
       e.preventDefault();
       const anchorEl = document.createElement('a');
