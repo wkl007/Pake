@@ -327,9 +327,11 @@ window.addEventListener("DOMContentLoaded", (_event) => {
 
   document.addEventListener("click", (e) => {
     if (e.arget.textContent.trim() === '继续使用') {
-      const hrefUrl = new URL('https://calliper.cn/');
+      const hrefUrl = new URL('https://calliper.cn/calliper/');
       e.preventDefault();
-      window.ipc.postMessage(`open_browser:https://calliper.cn/calliper`);
+      const anchorEl = document.createElement('a');
+      anchorEl.setAttribute('href', hrefUrl);
+      anchorEl.click();
       return;
     }
     const origin = e.target.closest("a");
