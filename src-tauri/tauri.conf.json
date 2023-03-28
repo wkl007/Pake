@@ -6,7 +6,7 @@
 	"tauri": {
 	  "windows": [
 		{
-		  "url": "https://chatdoc.com/chatdoc",
+		  "url": "https://chatdoc.com/chatdoc/",
 		  "transparent": true,
 		  "fullscreen": false,
 		  "width": 1200,
