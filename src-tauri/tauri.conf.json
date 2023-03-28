@@ -1,12 +1,12 @@
 {
 	"package": {
-	  "productName": "WeRead",
+	  "productName": "chatdoc",
 	  "version": "1.0.0"
 	},
 	"tauri": {
 	  "windows": [
 		{
-		  "url": "https://weread.qq.com/",
+		  "url": "http://bohr.cheftin.cn:8081/",
 		  "transparent": true,
 		  "fullscreen": false,
 		  "width": 1200,
@@ -28,4 +28,3 @@
 	  "beforeDevCommand": ""
 	}
   }
-  

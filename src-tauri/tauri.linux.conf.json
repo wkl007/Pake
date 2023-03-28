@@ -21,6 +21,9 @@
 		  ],
 		  "files": {"/usr/share/applications/com-tw93-weread.desktop": "assets/com-tw93-weread.desktop"}
 		},
+      "appimage": {
+        "bundleMediaFramework": true
+      },
 		"externalBin": [],
 		"longDescription": "",
 		"resources": [],
@@ -29,4 +32,3 @@
 	  }
 	}
   }
-  
