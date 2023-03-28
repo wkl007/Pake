@@ -6,7 +6,7 @@
 	"tauri": {
 	  "windows": [
 		{
-		  "url": "http://bohr.cheftin.cn:8081/",
+		  "url": "https://chatdoc.com/chatdoc",
 		  "transparent": true,
 		  "fullscreen": false,
 		  "width": 1200,
