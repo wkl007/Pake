@@ -60,7 +60,7 @@ ForEach ($line in (Get-Content -Path .\app.csv | Select-Object -Skip 1)) {
     # replace package_name with no regex
     (Get-Content -Path $common_conf_path -Raw) | ForEach-Object { $_.Replace('"productName": ""', "`"productName`": `"${title}`"") } | Set-Content $common_conf_path
 
-    # -- replace icon -- 
+    # -- replace icon --
     # clear icon path with regex
     (Get-Content -Path $windows_conf_path -Raw) -replace '(?s)"icon":\s*\[[^\]]*\]', '"icon": []' | Set-Content -Path $windows_conf_path
     # replace icon path with no regex
@@ -85,10 +85,10 @@ ForEach ($line in (Get-Content -Path .\app.csv | Select-Object -Skip 1)) {
     if (-not (Test-Path "src-tauri\png\${name}_256.ico")) {
       Copy-Item "src-tauri\png\icon_256.ico" "src-tauri\png\${name}_256.ico"
     }
-  
+
     # build package
     Write-Host "npm run build:windows"
-    npm run tauri build -- --target x86_64-pc-windows-msvc
+    npm run tauri build -- --target x86_64-pc-windows-msvc --features devtools
     Move-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\bundle\msi\*.msi" -Destination "output\windows\${title}_x64.msi"
     #rm cache
     Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\*.exe" -Recurse -Force
