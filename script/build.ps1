@@ -88,15 +88,15 @@ ForEach ($line in (Get-Content -Path .\app.csv | Select-Object -Skip 1)) {
 
     # build package
     Write-Host "npm run build:windows"
-    npm run tauri build -- --target x86_64-pc-windows-msvc --debug
-    Move-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\bundle\msi\*.msi" -Destination "output\windows\${title}_x64.msi"
+    npm run tauri build -- --target x86_64-pc-windows-msvc
+    Move-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\bundle\msi\*.msi" -Destination "output\windows\${title}_x64.msi"
     #rm cache
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\*.exe" -Recurse -Force
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\resources\*.ico" -Recurse -Force
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\png\*.ico" -Recurse -Force
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\wix\*.*" -Recurse -Force
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\app.*" -Force
-    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\debug\resources" -Recurse -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\*.exe" -Recurse -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\resources\*.ico" -Recurse -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\png\*.ico" -Recurse -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\wix\*.*" -Recurse -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\app.*" -Force
+    Remove-Item -Path "src-tauri\target\x86_64-pc-windows-msvc\release\resources" -Recurse -Force
     Write-Host "package build success!"
     Write-Host ""
     $index++
