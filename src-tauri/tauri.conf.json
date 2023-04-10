@@ -1,13 +1,13 @@
 {
 	"package": {
-	  "productName": "chatdoc",
+	  "productName": "ChatDOC",
 	  "version": "1.0.0"
 	},
 	"tauri": {
 	  "windows": [
 		{
 		  "url": "https://chatdoc.com/chatdoc/",
-		  "transparent": true,
+		  "transparent": false,
 		  "fullscreen": false,
 		  "width": 1200,
 		  "height": 780,
