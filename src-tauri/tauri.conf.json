@@ -1,6 +1,6 @@
 {
 	"package": {
-	  "productName": "chatdoc",
+	  "productName": "ChatDOC",
 	  "version": "1.0.0"
 	},
 	"tauri": {
