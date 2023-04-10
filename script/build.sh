@@ -61,7 +61,7 @@ do
     package_title=${arr[1]}
     package_zh_name=${arr[2]}
     url=${arr[3]}
-    
+
     # replace package info
     # clear url with regex
     $sd "\"url\": \"(.*?)\"," "\"url\": \"\"," src-tauri/tauri.conf.json
@@ -147,7 +147,7 @@ do
     echo "package name is ${package_name} (${package_zh_name})"
 
     if [[ "$OSTYPE" =~ ^linux ]]; then
-        npm run tauri build
+        npm run tauri build -- --features devtools
         mv src-tauri/target/release/bundle/deb/${package_prefix}-"${package_name}"*.deb output/linux/"${package_title}"_`arch`.deb
         mv src-tauri/target/release/bundle/appimage/${package_prefix}-"${package_name}"*.AppImage output/linux/"${package_title}"_`arch`.AppImage
         echo clear cache
@@ -158,7 +158,7 @@ do
 
     if [[ "$OSTYPE" =~ ^darwin ]]; then
 
-        npm run tauri build -- --target universal-apple-darwin
+        npm run tauri build -- --target universal-apple-darwin -- --features devtools
         mv src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg output/macos/"${package_title}".dmg
         echo clear cache
         rm -rf src-tauri/target/universal-apple-darwin

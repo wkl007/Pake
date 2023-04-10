@@ -33,7 +33,7 @@
     "start": "npm run dev",
     "dev": "npm run tauri dev",
     "dev:debug": "npm run tauri dev -- --features devtools",
-    "build": "npm run tauri build --release",
+    "build": "npm run tauri build --release -- --features devtools",
     "build:mac": "npm run tauri build -- --target universal-apple-darwin",
     "build:all-unix": "chmod +x ./script/build.sh && ./script/build.sh",
     "build:all-windows": "pwsh ./script/build.ps1",
