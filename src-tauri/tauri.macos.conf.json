@@ -2,7 +2,6 @@
   "tauri": {
     "bundle": {
       "icon": ["icons/weread.icns"],
-      "identifier": "com.chatdoc",
       "active": true,
       "category": "DeveloperTool",
       "copyright": "",
