@@ -7,7 +7,7 @@
 	  "windows": [
 		{
 		  "url": "https://chatdoc.com/chatdoc/",
-		  "transparent": true,
+		  "transparent": false,
 		  "fullscreen": false,
 		  "width": 1200,
 		  "height": 780,
