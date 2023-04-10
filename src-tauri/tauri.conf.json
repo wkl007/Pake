@@ -1,5 +1,6 @@
 {
-	"package": {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "package": {
 	  "productName": "ChatDOC",
 	  "version": "1.0.0"
 	},
@@ -19,8 +20,11 @@
 	  },
 	  "updater": {
 		"active": false
-	  }
-	},
+	  },
+    "bundle": {
+      "identifier": "com.PaodingAI.chatdoc"
+    }
+  },
 	"build": {
 	  "devPath": "../dist",
 	  "distDir": "../dist",
