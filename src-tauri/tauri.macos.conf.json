@@ -8,6 +8,7 @@
       "externalBin": [],
       "longDescription": "",
       "macOS": {
+        "minimumSystemVersion": "12.1",
         "entitlements": null,
         "exceptionDomain": "",
         "frameworks": [],
